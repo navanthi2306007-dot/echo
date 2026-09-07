@@ -153,7 +153,7 @@
 <div class="wrap">
   <header>
     <span>A quiet corner</span>
-    <h1>Whisper</h1>
+    <h1>Echo</h1>
     <p>Leave a thought, a memory, or a hello.</p>
   </header>
 
@@ -163,7 +163,7 @@
     <label>Your note</label>
     <textarea id="text" placeholder="Write something..."></textarea>
     <p class="error" id="err">Please fill in both fields.</p>
-    <button onclick="sendMsg()">Leave a whisper</button>
+    <button onclick="sendMsg()">Leave a echo</button>
   </div>
 
   <p class="divider">✦ ✦ ✦</p>
@@ -177,7 +177,7 @@ async function loadMsgs() {
   const data = await res.json();
   const list = document.getElementById('list');
   if (data.length === 0) {
-    list.innerHTML = '<p class="empty">No whispers yet. Be the first to leave one.</p>';
+    list.innerHTML = '<p class="empty">No Echo yet. Be the first to leave one.</p>';
     return;
   }
   list.innerHTML = data.map(m => `
